@@ -29,7 +29,7 @@ subroutine initFile(filename)
     open(2,file=trim(filename),iostat=ios)
     write(2,"(*(A,22X))") "Particle number", "Final velocity", "Final pos", "mass", "charge"
 end subroutine
-!this subroutine writes a particles data to a file:
+!this subroutine writes a particles data to a file with formatting:
 
 subroutine particleData(passedParticles, filename)
     implicit none
