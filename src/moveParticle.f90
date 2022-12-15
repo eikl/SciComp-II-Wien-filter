@@ -24,10 +24,11 @@ function newPosition(particleIndex,timeStep)
     !print*, "f_z", f(3)
     !print*, "f_y", f(2)
     !calculate the new speed
-    particle_array(particleIndex)%velocity = particle_array(particleIndex)%velocity + a*timeStep
+    particle_array(particleIndex)%velocity = v + a*timeStep
     !print*, particle_array(particleIndex)%velocity
     !calculate the new position
-    particle_array(particleIndex)%position=particle_array(particleIndex)%position + v * timeStep
+    particle_array(particleIndex)%position=particle_array(particleIndex)%position + particle_array(particleIndex)%velocity&
+     * timeStep
     newPosition = particle_array(particleIndex)%position
     !print*, newPosition
     !print*, a
